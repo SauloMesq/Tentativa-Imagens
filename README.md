@@ -75,7 +75,7 @@ exemplos: http://localhost:8080/users/12 - Para uso local
 ////
 
 
-CRUD de Mensagens
+## CRUD de Mensagens:
 Há também uma forma de adicionar mensagens pré-formatadas na tabela, com os parâmetros "Subject" e "Text".
 
 Utilize o seguinte formato:
@@ -129,7 +129,9 @@ exemplo: http://localhost:8080/sending-email/TulioAlbu/Aniversario - Para uso lo
 https://api-yara-sendingemail.herokuapp.com/sending-email/TulioAlbu/Aniversario - Para uso em nuvem
 
 
-### Nossos contatos:
+##
+
+## Nossos contatos:
 
 Basílio Queiroz:
 

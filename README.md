@@ -21,8 +21,8 @@ Com uma ferramenta auxiliar, é possível confirmar o envio, retornando data e h
 Mentoria:
 #### Ana Beatriz Cavalcanti Ribeiro
 
-- Linkedin: 
-- GitHub: 
+- Linkedin: https://www.linkedin.com/in/anabeatrizcavalcantir/
+
 
 #
 # Trabalho de conclusão do curso NExT - Nova Experiência de Trabalho (sem fins comerciais)

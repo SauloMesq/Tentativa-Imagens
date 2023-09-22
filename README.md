@@ -82,9 +82,9 @@ Na feramente para REST Request, utilize o seguinte formato:
 
 {
 
-"Subject": "Parabéns!";
+"Subject": "Infrome de planejamento";
 
-"Text": "Feliz aniversário !!!";
+"Text": "Execução do panejamento confirmada.";
 
 }
 
@@ -98,10 +98,12 @@ http://localhost:8080/message/id - Para uso local
 Colocando o número do ID do usuário depois do "id", você pode usar os seguintes métodos: GET, para buscar a mensagem por ID; DELETE, para apagar a mensagem identificado pelo ID; PUT, para atualizar dados da mensagem identificado pelo ID.
 
 
+
+
 ## Enviando e-mails:
 Para enviar e-mails utilizando a tabela de usuários, você deve seguir o seguintes modelos:
 
-http://localhost:8080/sending-email/user - Para uso local
+- http://localhost:8080/sending-email/user /api/v1/message??? - Para uso local
 Para mandar o e-mail para um usuário cadastrado no banco de dados, troque "user" pelo nome do usuário que você quer enviar.
 - Exemplo: 
 
@@ -120,11 +122,10 @@ Utilize o seguinte formato:
 Para enviar e-mail usando mensagens pré-cadastradas para usuários cadastrados, utilize a seguinte URL: http://localhost:8080/sending-email/nameUser/messageSubject - Para uso local
 
 https://api-yara-sendingemail.herokuapp.com/sending-email/nameUser/messageSubject - Para uso em nuvem
-No campo "nameUser" será passado o nome conforme foi cadastrado, sem espaço, e no "messageSubject" será passado o assunto da mensagem de e-mail também conforme cadastrado no banco de dados:
+No campo "user" será passado o nome conforme foi cadastrado, sem espaço, e no "subject" será passado o assunto da mensagem de e-mail também conforme cadastrado no banco de dados:
 
-exemplo: http://localhost:8080/sending-email/TulioAlbu/Aniversario - Para uso local
+- http://localhost:8080/sending-email/TulioAlbu/Aniversario - Para uso local
 
-https://api-yara-sendingemail.herokuapp.com/sending-email/TulioAlbu/Aniversario - Para uso em nuvem
 
 
 ##

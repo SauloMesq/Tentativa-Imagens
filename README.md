@@ -12,14 +12,14 @@ Com uma ferramenta auxiliar, é possível confirmar o envio, retornando data e h
 
 
 ### Criado por:
-- Basílio Queiroz;
-- Fábio Lins;
-- José Gabriel Oliveira;
+- Basílio Lima de Queiroz Santos;
+- Fábio Lins de Oliveira;
+- José Gabriel Coelho Oliveira;
 - Saulo Mesquita
 
 
 Mentoria:
-#### Ana Beatriz Cavalcanti
+#### Ana Beatriz Cavalcanti Ribeiro
 
 - Linkedin: 
 - GitHub: 
@@ -29,65 +29,57 @@ Mentoria:
 #
 
 ### O que é necessário para executar a aplicação locamente:
+```
 - OpenJDK 17.0.2 +;
 - Maven 3.9.4 +;
 - Uma ferramenta auxiliar para fazer REST requests. (Ex: Postman, Insomnia);
 - Spring Boot 3.1.3 +;
 - Um concetor a banco de dados (JDBC) (JBDC Connector).
+```
   
 ##### OBS: Você pode copiar o código direto para sua IDE.
 
 
-## CRUD - Usuários:
+## Funcionalidades (CRUD) - Usuários:
 Para executar a aplicação localmente, com o código aberto na sua IDE, primeiro você deverá ir em Aplication Properties e atualizar os dados de usuário (username=) e senha (password=), considerando seu banco de dados local de sua preferência (JBDC Connector) e o endereço que enviará as mensagens pré-formatadas;
 
 Depois de executar a aplicação e conectado ao banco de dados na sua máquina, você precisará de uma ferramenta para fazer REST Requests. Todos os testes de funcionalidade do CRUD e do envio de e-mail deste projeto foram feitos usando o Postman ou Insomnia.
 O banco de dados recebe informações sobre usuários, com os parâmetros "name", "email" e "organization".
 
 Na feramente para REST Request, utilize o seguinte formato:
-
+```
 {
-
 "name": "JoãoMaria";
-
 "email": "joaomaria@gmail.com";
-
 "organization": "cesar";
-
+"func": "Desenvolvedor";
 }
+```
 
-
-http://localhost:8080/user - Para uso local
-Usando essa URL request no Postman ou Insomnia, você pode utilizar os seguintes métodos: 
+http://localhost:8080/user - (uso local)
+Usando essa e as outras URLs request no Postman ou Insomnia, você pode utilizar os seguintes métodos: 
 - POST, para cadastrar usuários;
-
 - GET, para listar todos usuários cadastrados;
-////
 
-
-
-http://localhost:8080/users/id - Para uso local
+http://localhost:8080/users/id (uso local)
 
 Colocando o número do ID do usuário no lugar do "id", você pode usar os seguintes métodos: GET, para buscar o usuário por ID; DELETE, para apagar o usuário identificado pelo ID; PUT, para atualizar dados do usuário identificado pelo ID.
-
-- Exemplo: http://localhost:8080/users/3592347
+É possível atualizar o usuário modificando os atributos do mesmo: “email”, “name”, “organization” e “func”.
+- EX: http://localhost:8080/users/3592347
 
 
 
 #
-## CRUD - Mensagens:
+## Funcionalidades (CRUD) - Mensagens:
 Há também uma forma de adicionar mensagens pré-formatadas na tabela, com os parâmetros "Subject" e "Text".
 
-Na feramente para REST Request, utilize o seguinte formato:
-
+Na feramenta para REST Request, utilize o seguinte formato:
+```
 {
-
 "Subject": "Infrome de planejamento";
-
 "Text": "Execução do panejamento confirmada.";
-
 }
-
+```
 
 http://localhost:8080/message - Para uso local
 Usando essa URL request no Postman, você pode utilizar os seguintes métodos: POST, para cadastrar mensagens; GET, para listar todas mensagens cadastradas;
@@ -103,28 +95,28 @@ Colocando o número do ID do usuário depois do "id", você pode usar os seguint
 ## Enviando e-mails:
 Para enviar e-mails utilizando a tabela de usuários, você deve seguir o seguintes modelos:
 
-- http://localhost:8080/sending-email/user /api/v1/message??? - Para uso local
+- http://localhost:8080//{id}/org={organization} - Para uso local
 Para mandar o e-mail para um usuário cadastrado no banco de dados, troque "user" pelo nome do usuário que você quer enviar.
-- Exemplo: 
+
 
 No corpo do email, você deve preencher os campos "subject" e "text";
 
 Utilize o seguinte formato:
-
+```
 {
-
 "subject": "Aniversário",
-
 "text": "Parabéns, João !!"
-
 }
+```
 
-Para enviar e-mail usando mensagens pré-cadastradas para usuários cadastrados, utilize a seguinte URL: http://localhost:8080/sending-email/nameUser/messageSubject - Para uso local
 
-https://api-yara-sendingemail.herokuapp.com/sending-email/nameUser/messageSubject - Para uso em nuvem
+Para enviar e-mail usando mensagens pré-cadastradas para usuários cadastrados, utilize a seguinte URL:
+
+- http://localhost:8080//user/subject - Para uso local
+
 No campo "user" será passado o nome conforme foi cadastrado, sem espaço, e no "subject" será passado o assunto da mensagem de e-mail também conforme cadastrado no banco de dados:
 
-- http://localhost:8080/sending-email/TulioAlbu/Aniversario - Para uso local
+- http://localhost:8080/sending-email/JoaoMaria/ - Para uso local
 
 
 
@@ -132,23 +124,23 @@ No campo "user" será passado o nome conforme foi cadastrado, sem espaço, e no 
 
 ## Nossos contatos:
 
-Basílio Queiroz:
-
+| Basílio Queiroz: |
+| ------ |
 - Github: https://github.com/91basilio
 - Linkedin: https://www.linkedin.com/in/basilioqueiroz/
 
-Fábio Lins:
-
+| Fábio Lins: |
+| ------ |
 - Github: https://github.com/fllins
 - Linkedin:
 
-José Gabriel Oliveira:
-
+| José Gabriel Oliveira: |
+| ------ |
 - Github: https://github.com/Gabriel-Oliveira25
 - Linkedin:
 
-Saulo Mesquita:
-
+| Saulo Mesquita: |
+| ------ |
 - GitHub: https://github.com/SauloMesq
 - Linkedin: https://www.linkedin.com/in/saulo-mesquita-09024a249/
 

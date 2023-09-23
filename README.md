@@ -58,12 +58,12 @@ Na feramente para REST Request, utilize o seguinte formato:
 
 http://localhost:8080/user - (uso local)
 Usando essa e as outras URLs request no Postman ou Insomnia, você pode utilizar os seguintes métodos: 
-- POST, para cadastrar usuários;
-- GET, para listar todos usuários cadastrados;
+- *POST*, para cadastrar usuários;
+- *GET*, para listar todos usuários cadastrados;
 
 http://localhost:8080/users/id (uso local)
 
-Colocando o número do ID do usuário no lugar do "id", você pode usar os seguintes métodos: GET, para buscar o usuário por ID; DELETE, para apagar o usuário identificado pelo ID; PUT, para atualizar dados do usuário identificado pelo ID.
+Colocando o número do ID do usuário no lugar do "id", você pode usar os seguintes métodos: *GET*, para buscar o usuário por ID; *DELETE*, para apagar o usuário identificado pelo ID; *PUT*, para atualizar dados do usuário identificado pelo ID.
 É possível atualizar o usuário modificando os atributos do mesmo: “email”, “name”, “organization” e “func”.
 - EX: http://localhost:8080/users/3592347
 
@@ -81,13 +81,13 @@ Na feramenta para REST Request, utilize o seguinte formato:
 }
 ```
 
-http://localhost:8080/message - Para uso local
-Usando essa URL request no Postman, você pode utilizar os seguintes métodos: POST, para cadastrar mensagens; GET, para listar todas mensagens cadastradas;
+http://localhost:8080/message - (uso local)
+Usando essa URL request no ferramente de REST request, você pode utilizar os seguintes métodos: *POST*, para cadastrar mensagens; *GET*, para listar todas mensagens cadastradas;
 
 
 
-http://localhost:8080/message/id - Para uso local
-Colocando o número do ID do usuário depois do "id", você pode usar os seguintes métodos: GET, para buscar a mensagem por ID; DELETE, para apagar a mensagem identificado pelo ID; PUT, para atualizar dados da mensagem identificado pelo ID.
+http://localhost:8080/message/id - (uso local)
+Colocando o número do ID do usuário depois do "id", você pode usar os seguintes métodos: *GET*, para buscar a mensagem por ID; *DELETE*, para apagar a mensagem identificado pelo ID; *PUT*, para atualizar dados da mensagem identificado pelo ID.
 
 
 
@@ -95,7 +95,7 @@ Colocando o número do ID do usuário depois do "id", você pode usar os seguint
 ## Enviando e-mails:
 Para enviar e-mails utilizando a tabela de usuários, você deve seguir o seguintes modelos:
 
-- http://localhost:8080//{id}/org={organization} - Para uso local
+- http://localhost:8080/  - (uso local)
 Para mandar o e-mail para um usuário cadastrado no banco de dados, troque "user" pelo nome do usuário que você quer enviar.
 
 
@@ -110,13 +110,13 @@ Utilize o seguinte formato:
 ```
 
 
-Para enviar e-mail usando mensagens pré-cadastradas para usuários cadastrados, utilize a seguinte URL:
+## Para enviar e-mail usando mensagens pré-cadastradas para usuários cadastrados, utilize a seguinte URL:
 
-- http://localhost:8080//user/subject - Para uso local
+- http://localhost:8080/    - (uso local)
 
 No campo "user" será passado o nome conforme foi cadastrado, sem espaço, e no "subject" será passado o assunto da mensagem de e-mail também conforme cadastrado no banco de dados:
 
-- http://localhost:8080/sending-email/JoaoMaria/ - Para uso local
+- http://localhost:8080/sending-email/JoaoMaria/ - (uso local)
 
 
 

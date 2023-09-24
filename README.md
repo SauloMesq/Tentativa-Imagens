@@ -18,7 +18,7 @@ Com uma ferramenta auxiliar, é possível confirmar o envio, retornando o status
 - Basílio Lima de Queiroz Santos;
 - Fábio Lins de Oliveira;
 - José Gabriel Coelho Oliveira;
-- Saulo Mesquita
+- Saulo Roberto Farias de Mesquita
 
 
 Mentoria:
@@ -40,7 +40,7 @@ Mentoria:
 - Um endereço de Gmail para uso da aplicação e o envio dos emails.
 ```
   
-##### OBS: Você pode copiar o código direto para sua IDE.
+##### OBS: É possível copiar o código direto para sua IDE.
 
 
 ## Funcionalidades (CRUD) - Usuários:
@@ -50,7 +50,7 @@ Para executar a aplicação localmente, com o código aberto na sua IDE, primeir
 Depois de executar a aplicação e conectado ao banco de dados na sua máquina, você precisará de uma ferramenta para fazer REST Requests. Todos os testes de funcionalidade do CRUD e do envio de e-mail deste projeto foram feitos usando o Postman ou Insomnia.
 O banco de dados recebe informações sobre usuários, com os parâmetros "name", "email", "organization" e "func".
 
-Na feramente para REST Request, utilize o seguinte formato:
+Na feramenta para REST Request, utilize o seguinte formato:
 ```
 {
 "name": "JoãoMaria";
@@ -63,6 +63,7 @@ Métodos CRUD:
 http://localhost:8080/api/v1/user  - (uso local)
 - *POST*, para cadastrar usuários preenchendo os atributos acima;
 - *GET*, para buscar uma lista com todos os usuários cadastrados e todos os emails recebidos por cada usuário;
+  
   EX: 
 ```
 {
@@ -125,12 +126,12 @@ http://localhost:8080/api/v1/message - (uso local)
 - *POST*, para cadastrar mensagens;
 - *GET*, para buscar uma lista com todas as mensagens cadastradas;
 
-Colocando o número do ID do usuário depois do "id", você pode usar os seguintes métodos: *GET*, para buscar a mensagem por ID; *DELETE*, para apagar a mensagem identificado pelo ID; *PUT*, para atualizar dados da mensagem identificado pelo ID.
-http://localhost:8080/api/v1/message/{id} - (uso local)
+Colocando o número do ID do usuário depois do "id", você pode usar os seguintes métodos: *GET*, para buscar a mensagem pelo seu ID, *DELETE*, para apagar a mensagem pelo seu ID e *PUT*, para atualizar dados da mensagem pelo seu ID.
+- http://localhost:8080/api/v1/message/{id} - (uso local)
  
 
-É possível fazer uma busca por assunto da menssagem com o método *GET*:
-http://localhost:8080/api/v1/message/{subject} - (uso local)
+Também é possível fazer uma busca por assunto da menssagem com o método *GET*, substituindo "subject" na URL:
+- http://localhost:8080/api/v1/message/{subject} - (uso local)
 
 
 
@@ -150,12 +151,12 @@ Ex:
 
 
 É possível enviar e-mails usando mensagens pré-cadastradas para usuários de uma mesma organização pelo método *POST*.
-Utilizar o ID da mensagem pré-cadastradas e o nome da organização:
+Utilizar o ID da mensagem pré-cadastradas ("id) e o nome da organização ("organization"):
 Ex.:
 - http://localhost:8080/api/v1/{id}/org={organization} - (uso local)
  
 
-É possível enviar emails filtrando pela função e organização do usuário utilizando ID, função e organizacao
+Assim como também é possível enviar emails pelo método *POST* para usuários de uma mesma função ("function") utilizando o ID ("id") da mensagem:
 - http://localhost:8080/api/v1/{id}/func={function} - (uso local)
 
 
@@ -182,6 +183,7 @@ Ex.:
 | ------ |
 - GitHub: https://github.com/SauloMesq
 - Linkedin: https://www.linkedin.com/in/saulo-mesquita-09024a249/
+
 
 ![M@AIN 3](https://github.com/SauloMesq/Tentativa-Imagens/assets/136653514/9ea651f5-c1c0-4605-b71f-7193574bf174)
 

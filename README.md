@@ -76,11 +76,11 @@ http://localhost:8080/api/v1/user  - (uso local)
       {
         "id": "ae18-2b98",
         "sendFrom": "emailsendernext@gmail.com",
-        "sendTo": "reandomlocalmail@gmail.com",
+        "sendTo": "randomlocalmail@gmail.com",
         "subject": "É isso!",
         "text": "Será?",
         "dateSent": "2023-09-22T21:20:12.653367",
-        "statusMail": null
+        "statusMail": SENT
       } ],
       { "registrationDate": "2023-09-22T10:07:53.209895"  },
 
